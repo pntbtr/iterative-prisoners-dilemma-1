@@ -60,7 +60,7 @@ def main_play(modules):
         moves:
         sections: a list of [str, str, str, list of str]    
             '''
-    scores, moves = play_tournament(modules)
+    scores, moves = play_tournament([team1, team2])
     section0, section1, section2, section3 = make_reports(modules, scores, moves)
     code = make_code_string(modules)
     # On screen, include the first three out of four sections of the report.
