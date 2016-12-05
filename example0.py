@@ -7,8 +7,8 @@
 ####
 
 team_name = 'E0'
-strategy_name = 'Collude'
-strategy_description = 'Always collude.'
+strategy_name = 'tft'
+strategy_description = 'tft'
     
 def move(my_history, their_history, my_score, their_score):
     '''Make my move based on the history with this player.
@@ -20,7 +20,14 @@ def move(my_history, their_history, my_score, their_score):
     
     Returns 'c' or 'b' for collude or betray.
     '''
-    
+    move = ''
     # This player always colludes.
-    return 'c'
+    if len(my_history) == 0:
+        move = 'c'
+    else:
+        '''if random.randint(1,5) == 3:
+            move = "c"
+        else:'''
+        move = str.lower(their_history[-1])
+    return move
     
